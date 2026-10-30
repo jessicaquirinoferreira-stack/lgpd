@@ -33,9 +33,9 @@ Este projeto está **100% configurado e pronto para a Vercel** com:
    - Selecione o repositório **redacao-lgpd** que acabou de subir.
    - A Vercel detectará automaticamente o framework como **Vite**:
      - **Framework Preset**: `Vite`
-     - **Build Command**: `npm run build` (ou `vite build`)
+     - **Build Command**: `npm run build`
      - **Output Directory**: `dist`
-     - **Install Command**: `npm install`
+     - **Install Command**: `npm install --legacy-peer-deps` (já configurado no vercel.json e .npmrc automaticamente)
    - Clique em **"Deploy"**.
 
 3. Em menos de 1 minuto seu site estará online com HTTPS gratuito e CDN global! 🎉
