@@ -1,0 +1,6 @@
+{
+  "name": "Redação LGPD",
+  "description": "O caminho prático para dominar as discursivas e casos práticos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

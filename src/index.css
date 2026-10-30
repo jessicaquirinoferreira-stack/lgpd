@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Deep petroleum palette */
+    --color-petrol-950: #040e13;
+    --color-petrol-900: #07171e;
+    --color-petrol-850: #0b222c;
+    --color-petrol-800: #0f2c39;
+    --color-petrol-700: #164052;
+    --color-petrol-border: rgba(34, 98, 122, 0.25);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #051218;
+    color: #f0f6fc;
+  }
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Petrol Glassmorphism */
+.petrol-card {
+  background: linear-gradient(145deg, rgba(11, 34, 44, 0.75), rgba(7, 23, 30, 0.85));
+  border: 1px solid rgba(45, 140, 168, 0.2);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+}
+
+.petrol-card-interactive {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.petrol-card-interactive:hover {
+  border-color: rgba(45, 212, 191, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.6), 0 0 20px -5px rgba(20, 184, 166, 0.15);
+}
+
+/* Custom subtle noise texture */
+.bg-grid-pattern {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(45, 212, 191, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(45, 212, 191, 0.03) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-size: 28px 28px;
+  background-image: radial-gradient(rgba(45, 212, 191, 0.08) 1px, transparent 1px);
+}
+
+/* Legal paper lined effect */
+.paper-lined {
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 27px,
+    rgba(148, 163, 184, 0.1) 28px
+  );
+  line-height: 28px;
+}
+
+/* Subtle WhatsApp pulse */
+@keyframes subtle-pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4), 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0), 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.animate-pulse-glow {
+  animation: subtle-pulse-glow 2.8s infinite ease-in-out;
+}
+
